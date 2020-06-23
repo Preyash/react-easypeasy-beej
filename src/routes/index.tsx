@@ -33,12 +33,10 @@ const AppNavigation = () => {
       const deviceLanguageCode = translations.getInterfaceLanguage();
 
       const defaultlanguage = languages.find((language) =>
-        language.code.includes(deviceLanguageCode),
+        deviceLanguageCode.includes(language.code),
       );
 
-      if (defaultlanguage) {
-        onSelectLanguage(defaultlanguage);
-      }
+      onSelectLanguage(defaultlanguage || languages[0]);
     } else {
       onSelectLanguage(currentLanguage);
     }
