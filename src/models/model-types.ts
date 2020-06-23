@@ -1,3 +1,4 @@
+// Solves the cyclic dependency problem
 import { ActionOn, Action, Thunk, Computed } from 'easy-peasy';
 import { Injections } from 'services';
 
